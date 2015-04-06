@@ -1,84 +1,155 @@
-- title : FsReveal
-- description : Introduction to FsReveal
-- author : Karlkim Suwanmongkol
+- title : Seminarium dyplomowe
+- description : Wykorzystanie programowania funkcyjnego w tworzeniu aplikacji biznesowych
+- author : Tomasz Heimowski
 - theme : night
 - transition : default
+- language: polish
 
 ***
 
-### What is FsReveal?
+## Praca dyplomowa
 
 - Generates [reveal.js](http://lab.hakim.se/reveal-js/#/) presentation from [markdown](http://daringfireball.net/projects/markdown/)
 - Utilizes [FSharp.Formatting](https://github.com/tpetricek/FSharp.Formatting) for markdown parsing
 - Get it from [http://fsprojects.github.io/FsReveal/](http://fsprojects.github.io/FsReveal/)
-
-![FsReveal](images/logo.png)
-
-***
-
-### Reveal.js
-
-- A framework for easily creating beautiful presentations using HTML.
-
-
-> **Atwood's Law**: any application that can be written in JavaScript, will eventually be written in JavaScript.
+- Tomasz Heimowski
+- temat pracy: *Wykorzystanie programowania funkcyjnego w tworzeniu aplikacji biznesowych*
+- opiekun pracy: dr inż. Krzysztof Manuszewski
 
 ***
 
-### FSharp.Formatting
+## Plan drugiej prezentacji
 
-- F# tools for generating documentation (Markdown processor and F# code formatter).
-- It parses markdown and F# script file and generates HTML or PDF.
-- Code syntax highlighting support.
-- It also evaluates your F# code and produce tooltips.
+1. Krótkie przypomnienie co było na pierwszej prezentacji
+2. Omówienie postępów
+3. Demonstracja postępów (Demonstracja formularzy?)
+4. Plany na najbliższy czas
+5. **Podstawy programowania funkcyjnego**
+6. Rzeczywisty przykład - Paradygmat imperatywny vs. funkcyjny
 
 ***
 
-### Syntax Highlighting
+## Przypomnienie
 
-#### F# (with tooltips)
+### (pierwsza prezentacja)
 
-    let a = 5
-    let factorial x = [1..x] |> List.reduce (*)
-    let c = factorial a
+- zainteresowanie się językiem F#
+- pomysł na pracę magisterską
+- zadania do realizacji
+    - aplikacja internetowa
+    - samouczek
+    - praca dyplomowa
+- dlaczego taki temat
+
+***
+
+## Postępy
+
+### (pierwsza prezentacja)
+
+- Wymyślenie tematu oraz zaplanowanie przebiegu pracy dyplomowej
+- Nawiązanie kontaktu ze społecznością F#,
+- W szczególności z członkami fundacji fsharp.org odpowiedzialnymi za technologie internetowe
+- Niekompletna implementacja aplikacji internetowej
 
 ---
 
-#### C#
+## Postępy
+
+### (od czasu pierwszej prezentacji)
+
+- Dokończenie implementacji aplikacji internetowej (prawie)
+- Wstępny przegląd kodu przez twórców Suave.IO
+- Napisanie funkcjonalności formularzy
+    - walidacja pól po stronie serwera oraz klienta (HTML5)
+- Częściowe uporządkowanie kodu
+
+***
+
+## Demonstracja aplikacji internetowej
+
+***
+
+## Plany na najbliższy czas
+
+- Dopracowanie szczegółów funkcjonalnych
+- Ostateczne uporządkowanie kodu
+- Szczegółowy przegląd kodu przez specjalistów
+- Rozpoczęcie pisania samouczka
+
+***
+
+## Podstawy programowania funkcyjnego
+
+### niezmienność
+
+- Wartość raz przypisana do symbolu, nie może się zmienić w trakcie działania programu
+- W rezultacie nie istnieje koncept "zmiennych"
+- Z początku może się wydawać to ograniczeniem
+- W praktyce, niezmienność okazuje się być zaletą
+
+---
+
+#### Tradycyjne podejście ze zmienną - C#
 
     [lang=cs]
-    using System;
+    int x = 10;
+    x = x * 5;
+    x = x + 3;
 
-    class Program
+#### To samo, bez zmiennych - C#
+
+    [lang=cs]
+    int x = 10;
+    int x2 = x * 5;
+    int x3 = y + 3;
+
+---
+
+## Podstawy programowania funkcyjnego
+
+### rekurencja
+
+Skoro nie możemy mieć zmiennych, jak napisać funkcję liczącą sumę liczb z zadanego zakresu?
+
+#### Sumowanie liczb - C# imperatywnie
+
+    [lang=cs]
+    int SumNumbers(int start, int end)
     {
-        static void Main()
+        int sum = 0;
+        for (int i = start; i <= end; i = i+1)
         {
-            Console.WriteLine("Hello, world!");
+            sum = sum + i;
+        }
+        return sum;
+    }
+
+---
+
+#### Sumowanie liczb - C# rekurencja
+
+    [lang=cs]
+    int SumNumbers(int start, int end)
+    {
+        if (start > end) 
+        {
+            return 0;
+        }
+        else 
+        {
+            return start + SumNumbers(start + 1, end);
         }
     }
 
----
+#### Sumowanie liczb - F# rekurencja
 
-#### JavaScript
-
-    [lang=js]
-    function copyWithEvaluation(iElem, elem) {
-        return function (obj) {
-            var newObj = {};
-            for (var p in obj) {
-                var v = obj[p];
-                if (typeof v === "function") {
-                    v = v(iElem, elem);
-                }
-                newObj[p] = v;
-            }
-            if (!newObj.exactTiming) {
-                newObj.delay += exports._libraryDelay;
-            }
-            return newObj;
-        };
-    }
-
+    [lang=fs]
+    let sumNumbers start stop =
+        if start > stop then 
+            0
+        else
+            start + sumNumbers (start + 1) stop
 
 ---
 
@@ -88,27 +159,28 @@
     recur_count k = 1 : 1 : 
         zipWith recurAdd (recur_count k) (tail (recur_count k))
             where recurAdd x y = k * x + y
+## Podstawy programowania funkcyjnego
 
-    main = do
-      argv <- getArgs
-      inputFile <- openFile (head argv) ReadMode
-      line <- hGetLine inputFile
-      let [n,k] = map read (words line)
-      printf "%d\n" ((recur_count k) !! (n-1))
+### funkcje wyższego rzędu
 
-*code from [NashFP/rosalind](https://github.com/NashFP/rosalind/blob/master/mark_wutka%2Bhaskell/FIB/fib_ziplist.hs)*
+Funkcja, która jako swój argument przyjmuje inną funkcję
 
 ---
 
-### SQL
+    [lang=fs]
+    let numbers = [ 1 .. 10 ]
+    let isOdd n = n % 2 = 1
+    let square n = n * n
 
-    [lang=sql]
-    select *
-    from
-    (select 1 as Id union all select 2 union all select 3) as X
-    where Id in (@Ids1, @Ids2, @Ids3)
+    // val numbers : int list
+    // val isOdd : int -> bool
+    // val square : int -> int
 
-*sql from [Dapper](https://code.google.com/p/dapper-dot-net/)*
+    List.filter isOdd numbers
+    // val it : int list = [1; 3; 5; 7; 9]
+    
+    List.map square (List.filter isOdd numbers)
+    // val it : int list = [1; 9; 25; 49; 81]
 
 ---
 
@@ -132,21 +204,14 @@
 
 ***
 
-**Bayes' Rule in LaTeX**
+## Paradygmat imperatywny vs. funkcyjny
 
-$ \Pr(A|B)=\frac{\Pr(B|A)\Pr(A)}{\Pr(B|A)\Pr(A)+\Pr(B|\neg A)\Pr(\neg A)} $
+### Separation of concerns
+
+### Rozdzielenie zagadnień
+
+https://twitter.com/mariofusco/status/571999216039542784
 
 ***
 
-### The Reality of a Developer's Life 
-
-**When I show my boss that I've fixed a bug:**
-  
-![When I show my boss that I've fixed a bug](http://www.topito.com/wp-content/uploads/2013/01/code-07.gif)
-  
-**When your regular expression returns what you expect:**
-  
-![When your regular expression returns what you expect](http://www.topito.com/wp-content/uploads/2013/01/code-03.gif)
-  
-*from [The Reality of a Developer's Life - in GIFs, Of Course](http://server.dzone.com/articles/reality-developers-life-gifs)*
-
+![imperatywny vs funkcyjny](images/imperative_functional.jpg)
