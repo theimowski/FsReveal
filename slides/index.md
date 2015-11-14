@@ -10,7 +10,8 @@
 ## Praca dyplomowa
 
 ### Tomasz Heimowski
-#### Wykorzystanie programowania funkcyjnego w tworzeniu aplikacji biznesowych
+#### Application of functional programming to business applications development
+#### Wykorzystywanie programowania funkcyjnego w tworzeniu aplikacji biznesowych
 
 opiekun pracy: dr inż. Krzysztof Manuszewski
 
@@ -20,7 +21,7 @@ opiekun pracy: dr inż. Krzysztof Manuszewski
 
 1. Temat pracy
 2. Zrealizowane zadania
-3. Rezultaty i wnioski
+3. Rezultaty, wnioski, dalsze prace
 
 ***
 
@@ -54,6 +55,7 @@ http://www.asp.net/mvc/overview/older-versions/mvc-music-store/mvc-music-store-p
 
 ## Samouczek
 
+* Napisany w języku angielskim
 * Również bazuje na samouczku zespołu ASP.NET MVC
 * Uczy jak wytworzyć aplikację internetową w języku F# przy zastosowaniu różnych mechanizmów funkcyjnych
 * Opublikowany na witrynie GitBook
@@ -63,14 +65,15 @@ https://www.gitbook.com/book/theimowski/suave-music-store
 
 ## Praca dyplomowa
 
-* Omawia zagadnienie paradygmatów programowania
+* Napisana w języku angielskim
+* Omawia pojęcie paradygmatu programowania i opisuje kilka najpopularniejszych paradygmatów
 * Przedstawia podejście funkcyjne i jego założenia
 * Pokazuje jak obecnie języki funkcyjne są wykorzystywane w przemyśle oprogramowania
 * Poprzez odniesienie się do najważniejszych części samouczka, przedstawia proces wytworzenia aplikacji w tym podejściu
 
 ***
 
-## Rezultaty i wnioski
+## Rezultaty, wnioski, dalsze prace
 
 ---
 
@@ -96,6 +99,16 @@ https://www.gitbook.com/book/theimowski/suave-music-store
 
 * Udzielenie się w społeczności F# - cel osiągnięty
 * Praca dyplomowa przekonuje do zastosowania paradygmatu funkcyjnego w oprogramowaniu biznesowym
-* Kontynuacja prac w obszarze aplikacji internetowych i F#
+
+---
+
+## Kontynuacja prac
+
+* Zainteresowanie obszarem aplikacji internetowych w F#
+* Framework "Freya"
+* Propozycja "stosu technologicznego"
+    * X-Platform
+    * CoreCLR
+    * Docker (?)
 
 ***
