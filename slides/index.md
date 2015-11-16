@@ -98,7 +98,8 @@ https://www.gitbook.com/book/theimowski/suave-music-store
 ## Wnioski
 
 * Udzielenie się w społeczności F# - cel osiągnięty
-* Praca dyplomowa przekonuje do zastosowania paradygmatu funkcyjnego w oprogramowaniu biznesowym
+* Włożony wysiłek nie poszedł w zapomnienie - cel osiągnięty
+* Napisana praca dyplomowa ma przekonać do zastosowania paradygmatu funkcyjnego w oprogramowaniu biznesowym
 
 ---
 
@@ -106,9 +107,11 @@ https://www.gitbook.com/book/theimowski/suave-music-store
 
 * Zainteresowanie obszarem aplikacji internetowych w F#
 * Framework "Freya"
-* Propozycja "stosu technologicznego"
-    * X-Platform
+* Propozycja "stosu technologicznego" X-Platform
+    * Linux
     * CoreCLR
-    * Docker (?)
+    * Docker
+    * F#
+    * Suave
 
 ***
