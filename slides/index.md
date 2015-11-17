@@ -49,7 +49,7 @@ opiekun pracy: dr inż. Krzysztof Manuszewski
 http://www.asp.net/mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-1
 * Music Store - muzyczny sklep internetowy
 * Nieskomplikowane funkcjonalności
-* Rozwiązuje popularne zagadnienia *"web development"*
+* Adresuje znane problemy *"web development"*
 
 ---
 
@@ -69,7 +69,7 @@ https://www.gitbook.com/book/theimowski/suave-music-store
 * Omawia pojęcie paradygmatu programowania i opisuje kilka najpopularniejszych paradygmatów
 * Przedstawia podejście funkcyjne i jego założenia
 * Pokazuje jak obecnie języki funkcyjne są wykorzystywane w przemyśle oprogramowania
-* Poprzez odniesienie się do najważniejszych części samouczka, przedstawia proces wytworzenia aplikacji w tym podejściu
+* Poprzez odniesienie się do najważniejszych części samouczka, przedstawia proces wytworzenia aplikacji biznesowej w tym podejściu
 
 ***
 
