@@ -58,6 +58,7 @@ http://www.asp.net/mvc/overview/older-versions/mvc-music-store/mvc-music-store-p
 * Napisany w języku angielskim
 * Również bazuje na samouczku zespołu ASP.NET MVC
 * Uczy jak wytworzyć aplikację internetową w języku F# przy zastosowaniu różnych mechanizmów funkcyjnych
+* Wymienia zalety płynące z programowania funkcyjnego
 * Opublikowany na witrynie GitBook
 https://www.gitbook.com/book/theimowski/suave-music-store
 
@@ -99,7 +100,7 @@ https://www.gitbook.com/book/theimowski/suave-music-store
 
 * Udzielenie się w społeczności F# - cel osiągnięty
 * Włożony wysiłek nie poszedł w zapomnienie - cel osiągnięty
-* Napisana praca dyplomowa ma przekonać do zastosowania paradygmatu funkcyjnego w oprogramowaniu biznesowym
+* Zastosowanie paradygmatu funkcyjnego w oprogramowaniu biznesowym niesie za sobą wiele zalet - a napisana praca dyplomowa ma o tym przekonać
 
 ---
 
