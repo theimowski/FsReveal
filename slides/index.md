@@ -94,7 +94,13 @@ https://www.gitbook.com/book/theimowski/suave-music-store
 
 ![slack](images/slack.png)
 
---- 
+---
+
+## Japanese version?
+
+![japan](images/japan.png)
+
+---
 
 ## Wnioski
 
